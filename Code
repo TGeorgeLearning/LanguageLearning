@@ -1,0 +1,37 @@
+!pip install translate
+from translate import Translator
+
+translator = Translator(to_lang='es')
+
+translation = translator.translate('go')
+print(translation)
+
+from datetime import date
+check=""
+today=date.today()
+print(today)
+
+import nltk 
+nltk.download('words')
+from nltk.corpus import words
+
+listwords = words.words()
+print(listwords[1])
+
+import random
+x=(random.randrange(0,len(listwords)))
+print(x)
+
+if (check==today):
+   check=date.today()
+   print("Translate the random word into spanish: " + translator.translate(listwords[x]))
+   print(translator.translate(listwords[x]))
+   user=input("Enter the answer: ")
+   print(listwords)
+   if (user==listwords[x]):
+     print("good job")
+else:
+  print("Come back tomorrow")
+
+
+
